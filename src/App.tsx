@@ -5,9 +5,6 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <MainBody>
-        <div>Here comes the Body</div>
-      </MainBody>
     </div>
   );
 }
