@@ -7,7 +7,7 @@ const useStyles = makeStyles(() => ({
   header: {
     backgroundColor: "#2b7275",
     borderRadius: "5%",
-    width: "1440px",
+    width: "70%",
     marginRight: "auto",
     marginLeft: "auto",
   },
