@@ -1,12 +1,12 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, makeStyles} from "@material-ui/core";
 
 type Props = {};
 
 const useStyles = makeStyles(() => ({
   header: {
-    backgroundColor: "#2b7275",
-    borderRadius: "5%",
+    backgroundColor: "rgb(43,114,117,1)",
+    borderRadius: "10px",
     width: "70%",
     marginRight: "auto",
     marginLeft: "auto",
