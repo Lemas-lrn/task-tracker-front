@@ -13,7 +13,20 @@ type Props = {
 const MenuButtons: React.FC<Props> = ({ data }) => {
   return (
     <div>
-
+      {data.map(({ label, href }) => {
+        return (
+          <Button
+            {...{
+              key: label,
+              color: "inherit",
+              to: href,
+              component: RouterLink,
+            }}
+          >
+            {label}
+          </Button>
+        );
+      })}
     </div>
   );
 };
