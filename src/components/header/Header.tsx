@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, makeStyles, Button } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
 import MenuButtons, { IMenuButtonsData } from "./menuButtons/MenuButtons";
 
 type Props = {};
@@ -30,27 +30,32 @@ const useStyles = makeStyles(() => ({
     width: "70%",
     marginRight: "auto",
     marginLeft: "auto",
+    paddingRight: "79px",
+    paddingLeft: "118px",
   },
   logo: {
     fontFamily: "Work Sans, sans-serif",
     fontWeight: 600,
     color: "#FFFEFE",
     textAlign: "left",
-    marginRight: "64px"
+  },
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
   },
 }));
 
 const Header: React.FC<Props> = () => {
-  const { header, logo } = useStyles();
+  const { header, logo, toolbar } = useStyles();
 
   return (
     <header>
       <AppBar position="relative" className={header}>
-        <Toolbar>
+        <Toolbar className={toolbar}>
           <Typography variant="h6" component="h1" className={logo}>
             Task tracker
           </Typography>
-          <MenuButtons data={HeaderData}/>
+          <MenuButtons data={HeaderData} />
         </Toolbar>
       </AppBar>
     </header>
