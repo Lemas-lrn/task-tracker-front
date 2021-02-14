@@ -1,15 +1,16 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, makeStyles, Button } from "@material-ui/core";
+import MenuButtons, { IMenuButtonsData } from "./menuButtons/MenuButtons";
 
 type Props = {};
 
-const HeaderData = [
+const HeaderData: IMenuButtonsData[] = [
   {
     label: "My Tasks",
     href: "/mytasks",
   },
   {
-    label: "Group Taskts",
+    label: "Group Tasks",
     href: "/grouptasks",
   },
   {
@@ -48,6 +49,7 @@ const Header: React.FC<Props> = () => {
           <Typography variant="h6" component="h1" className={logo}>
             Task tracker
           </Typography>
+          <MenuButtons data={HeaderData}/>
         </Toolbar>
       </AppBar>
     </header>
