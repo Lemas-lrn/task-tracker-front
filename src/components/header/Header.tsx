@@ -36,6 +36,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     color: "#FFFEFE",
     textAlign: "left",
+    marginRight: "64px"
   },
 }));
 
