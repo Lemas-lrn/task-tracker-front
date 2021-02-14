@@ -1,7 +1,26 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, makeStyles} from "@material-ui/core";
+import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
 
 type Props = {};
+
+const HeaderData = [
+  {
+    label: "My Tasks",
+    href: "/mytasks",
+  },
+  {
+    label: "Group Taskts",
+    href: "/grouptasks",
+  },
+  {
+    label: "In Progress",
+    href: "/inprogress",
+  },
+  {
+    label: "Completed",
+    href: "/completed",
+  },
+];
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -24,7 +43,7 @@ const Header: React.FC<Props> = () => {
 
   return (
     <header>
-      <AppBar position='relative' className={header}>
+      <AppBar position="relative" className={header}>
         <Toolbar>
           <Typography variant="h6" component="h1" className={logo}>
             Task tracker
